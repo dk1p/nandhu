@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images with Arrow Connectors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Section 1: Image 1 on the Left -->
+    <div class="section left">
+      <img src="image-1.jpg" alt="Image 1" class="section-image">
+    </div>
+
+    <!-- Arrow Connector -->
+    <svg class="arrow-connector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+      <path d="M200,50 C150,100 50,0 0,50" fill="none" stroke="gray" stroke-width="2" stroke-dasharray="5,5" />
+    </svg>
+
+    <!-- Section 2: Image 2 on the Right -->
+    <div class="section right">
+      <img src="image-2.jpg" alt="Image 2" class="section-image">
+    </div>
+
+    <!-- Section 3: Image 3 on the Left -->
+    <div class="section left">
+      <img src="image-3.jpg" alt="Image 3" class="section-image">
+    </div>
+  </div>
+</body>
+</html>

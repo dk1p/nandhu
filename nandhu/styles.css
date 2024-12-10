@@ -1,0 +1,66 @@
+/* Container for all sections */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 20px;
+  position: relative;
+}
+
+/* Style for each section */
+.section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left-aligned section */
+.section.left {
+  flex-direction: row;
+}
+
+/* Right-aligned section */
+.section.right {
+  flex-direction: row-reverse;
+}
+
+/* Images inside each section */
+.section .section-image {
+  width: 50%;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* Arrow Connectors */
+.arrow-connector {
+  width: 200px; /* Match the viewBox width */
+  height: 200px; /* Match the viewBox height */
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 104px; /* Adjust relative to the first image */
+  left: 50%; /* Center horizontally */
+  transform: translateX(0%); /* Center-align the SVG to the container */
+}
+
+
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column !important;
+  }
+
+  .section-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .arrow-connector {
+    height: 50px;
+    margin: -25px 0;
+  }
+}
